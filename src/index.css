@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-oswald: "Oswald";
+  --animate-gradient: gradient 0.4s ease infinite;
+  --animate-gradient-btn: gradient-effect-btn 1s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradient-effect-btn {
+    0% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500)
+      );
+    }
+    50% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+    }
+    100% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500)
+      );
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    to {
+      transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+  }
+}
+
+@layer base {
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: radial-gradient(
+      125% 125% at 50% 90%,
+      #000000 40%,
+      #0d1a36 100%
+    );
+
+    @apply text-white;
+  }
+}
+
+.fancy-border {
+  --offset: 2px;
+  border-radius: 50px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.fancy-border::before {
+  content: "";
+  background: conic-gradient(
+    transparent 270deg,
+    var(--color-blue-500),
+    transparent
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+
+.fancy-border::after {
+  content: "";
+  background: inherit;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+}
