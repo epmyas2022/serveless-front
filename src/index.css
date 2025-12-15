@@ -5,6 +5,63 @@
   --font-oswald: "Oswald";
   --animate-gradient: gradient 0.4s ease infinite;
   --animate-gradient-btn: gradient-effect-btn 1s ease infinite;
+  --animate-gradient-background: background-gradient-effect 5s ease-in-out
+    infinite;
+
+  @keyframes background-gradient-effect {
+    0% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+      background-size: 200% 200%;
+      background-position: 0% 50%;
+    }
+
+    30% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+      background-size: 200% 200%;
+      background-position: 50% 50%;
+    }
+    60% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+      background-size: 200% 200%;
+      background-position: 100% 50%;
+    }
+
+    90% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+      background-size: 200% 200%;
+      background-position: 50% 50%;
+    }
+    100% {
+      background: linear-gradient(
+        to right,
+        var(--color-blue-200),
+        var(--color-blue-500),
+        var(--color-blue-200)
+      );
+      background-size: 200% 200%;
+      background-position: 0% 50%;
+    }
+  }
 
   @keyframes gradient {
     0% {
