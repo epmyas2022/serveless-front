@@ -1,8 +1,5 @@
 import ServiceCard from "./components/ServiceCard";
-import {
-  Docker,
-  Search,
-} from "./components/SvgIcons";
+import { Docker, Search } from "./components/SvgIcons";
 import { useMock } from "./hooks/useMock.hook";
 
 export function App() {
@@ -18,8 +15,8 @@ export function App() {
       </h1>
 
       <p className="text-center text-gray-300 lg:text-xl max-w-2xl px-4">
-        DeployServerless is a platform that allows you to easily deploy and manage
-        serverless applications using a variety of services.
+        DeployServerless is a platform that allows you to easily deploy and
+        manage serverless applications using a variety of services.
       </p>
 
       <div className="mt-20">
@@ -34,14 +31,23 @@ export function App() {
               />
             </div>
           </div>
-          <button
-            className=" from-blue-500 to-blue-200 bg-linear-to-r group
-           text-white rounded font-bold text-sm cursor-pointer p-px w-32"
-          >
-            <div className="bg-black p-2 rounded w-full h-full text-blue-500 group-hover:from-blue-200 group-hover:to-blue-500">
-              New Service
-            </div>
-          </button>
+          <div className="flex gap-6">
+            <button
+              className="from-blue-500 to-blue-200 bg-linear-to-r group
+             text-white rounded-full font-bold text-sm cursor-pointer p-px w-32"
+            >
+              <div className="bg-black p-2 rounded-full w-full h-full text-blue-500 group-hover:from-blue-200 group-hover:to-blue-500">
+                New Service
+              </div>
+            </button>
+
+            <button
+              className="bg-white border border-blue-500 text-blue-500 
+            rounded-full font-bold text-sm cursor-pointer p-2 w-32 hover:bg-blue-500 hover:text-white transition-colors"
+            >
+              New Project
+            </button>
+          </div>
         </div>
         <br />
         <div className="flex gap-16 flex-wrap justify-center">

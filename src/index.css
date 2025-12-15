@@ -5,7 +5,7 @@
   --font-oswald: "Oswald";
   --animate-gradient: gradient 0.4s ease infinite;
   --animate-gradient-btn: gradient-effect-btn 1s ease infinite;
-  --animate-gradient-background: background-gradient-effect 5s ease-in-out
+  --animate-gradient-background: background-gradient-effect 3s ease-in-out
     infinite;
 
   @keyframes background-gradient-effect {
