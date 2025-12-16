@@ -1,16 +1,20 @@
 import ParticleBackground from "./components/ParticleBackground";
 import ServiceCard from "./components/ServiceCard";
-import { Docker, Search } from "./components/SvgIcons";
+import {  Search } from "./components/SvgIcons";
 import { useMock } from "./hooks/useMock.hook";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export function App() {
   const { services } = useMock();
   return (
     <div className="relative flex lg:h-dvh w-full items-center flex-col justify-center ">
       <ParticleBackground />
+
       <div className="relative">
-        <h1 className="lg:text-8xl inset-0 mt-6 text-6xl text-white font-oswald font-bold flex flex-col sm:flex-row gap-6 mb-7">
-          <Docker width={100} height={100} />
+        <h1 className="lg:text-8xl inset-0 mt-7 text-6xl text-white font-oswald font-bold flex flex-col sm:flex-row gap-6 mb-4 items-center">
+          <div className="flex items-center">
+            <DotLottieReact src="/src/assets/docker-logo.json" loop autoplay width={150} height={150} />
+          </div>
           Deploy
           <span className="bg-clip-text! text-transparent animate-gradient-background">
             Serverless
