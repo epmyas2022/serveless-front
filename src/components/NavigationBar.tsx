@@ -6,18 +6,18 @@ export default function NavigationBar() {
           Serverless
         </h1>
       </div>
-      <ul className="hidden gap-3 text-md font-medium mr-12 text-gray-400 *:hover:text-white transition-colors md:flex">
-        <li className="hover:underline">
+      <ul className="hidden gap-3 text-md font-medium mr-12 text-white transition-colors md:flex ">
+        <li className="hover:underline hover:bg-clip-text! hover:text-transparent! hover:animate-gradient-background">
           <a href="/">Home</a>
         </li>
-        <li className="hover:underline">
+        <li className="hover:underline hover:bg-clip-text! hover:text-transparent! hover:animate-gradient-background">
           <a href="/about">About</a>
         </li>
-        <li className="hover:underline">
+        <li className="hover:underline hover:bg-clip-text! hover:text-transparent! hover:animate-gradient-background">
           <a href="/contact">Contact</a>
         </li>
 
-        <li className="hover:underline">
+        <li className="hover:underline hover:bg-clip-text! hover:text-transparent! hover:animate-gradient-background">
           <a href="/login">Login</a>
         </li>
       </ul>
