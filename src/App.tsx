@@ -1,3 +1,4 @@
+import ParticleBackground from "./components/ParticleBackground";
 import ServiceCard from "./components/ServiceCard";
 import { Docker, Search } from "./components/SvgIcons";
 import { useMock } from "./hooks/useMock.hook";
@@ -6,13 +7,19 @@ export function App() {
   const { services } = useMock();
   return (
     <div className="relative flex lg:h-dvh w-full items-center flex-col justify-center ">
-      <h1 className="lg:text-8xl mt-6 text-6xl text-white font-oswald font-bold flex flex-col sm:flex-row gap-6 mb-7">
-        <Docker width={100} height={100} />
-        Deploy
-        <span className="bg-clip-text! text-transparent animate-gradient-background">
-          Serverless
-        </span>
-      </h1>
+      <ParticleBackground />
+      <div className="relative">
+        <h1 className="lg:text-8xl inset-0 mt-6 text-6xl text-white font-oswald font-bold flex flex-col sm:flex-row gap-6 mb-7">
+          <Docker width={100} height={100} />
+          Deploy
+          <span className="bg-clip-text! text-transparent animate-gradient-background">
+            Serverless
+          </span>
+        </h1>
+
+        <div className="bg-blue-400 w-36 h-28 absolute rounded-full blur-3xl top-0"></div>
+        <div className="bg-pink-400/50 w-36 h-28 absolute rounded-full blur-3xl bottom-0 right-0"></div>
+      </div>
 
       <p className="text-center text-gray-300 lg:text-xl max-w-2xl px-4">
         DeployServerless is a platform that allows you to easily deploy and
